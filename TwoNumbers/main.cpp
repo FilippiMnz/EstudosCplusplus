@@ -18,10 +18,8 @@ class Solution{
                 Sum.push_back(l1[i] + l2[i]);
             }
             return Sum;
-        }
-       
+        }     
 };
-
 int main(){
     Solution Sol;
     vector<int> lista1 = {2,4,3};
