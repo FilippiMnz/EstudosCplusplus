@@ -22,7 +22,8 @@ int main(){
     }
     arquivo.close();
 
-    vector<int> Lista3(Lista1.size());
+    vector<int> Lista3(Lista1.size()); 
+    vector<int> Lista4(Lista1.size());
 
 
     
@@ -44,11 +45,7 @@ int main(){
 
         }
     }
-
-    //comparação Listas
-    for(int i = 0; i < tamanho; i++){
-        Lista1[i];
-    }
+    
     //operacao diferenca
     for(int j = 0; j< tamanho; j++){
         Lista3[j] = Lista1[j] - Lista2[j];
@@ -56,13 +53,37 @@ int main(){
             Lista3[j] *=-1;
         }
     }
+
+    for(int i = 0; i < tamanho; i++){
+        int contador = 0;
+        for(int j = 0; j< Lista2.size(); j++){
+            if(Lista1[i] == Lista2[j]){
+                contador++;
+            }
+            if(Lista4[i] < 0){
+                Lista4[i] *=-1;
+            }
+        }
+        Lista4[i] = Lista1[i] * contador;
+        
+    }
+
+    //soma Dos produtos
+    int Produto = 0;
+    for(int i = 0; i <tamanho; i++){
+        Produto += Lista4[i];
+    }
+    
+
     int soma = 0;
     for(int i = 0; i < tamanho; i++){
         soma +=  Lista3[i];
     }
    
-    cout << "Lista 4" <<endl;
-    cout << soma;
+    cout << "Soma" <<endl;
+    cout << soma << endl;
+    cout << "Produtos" << endl;
+    cout << Produto <<endl;
 
     
     cout << endl;
